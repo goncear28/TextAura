@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextAura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas animat fundal -->
+<canvas id="backgroundCanvas"></canvas>
+
+
+  <div class="container">
+    <header>
+      <h1 id="title">TextAura</h1>
+      <select id="languageSelect" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="ro">Română</option>
+        <option value="ru">Русский</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+    </header>
+
+    <!-- Fancy Text Generator -->
+    <div class="generator">
+      <input type="text" id="inputText" placeholder="Enter text here...">
+      <button id="generateBtn" onclick="generateFancyText()">Generate Fancy Text</button>
+      <h2 id="outputTitle">Results:</h2>
+      <div id="outputText"></div>
+    </div>
+
+    <!-- Nickname Generator -->
+    <div class="generator">
+      <input type="text" id="nicknameKeyword" placeholder="Enter a keyword...">
+      <button id="generateNickBtn" onclick="generateNickname()">Generate Nickname</button>
+      <h2 id="nicknameTitle">Generated Nicknames:</h2>
+      <div id="nicknameOutput"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

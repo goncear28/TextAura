@@ -1,0 +1,136 @@
+/* BODY & BACKGROUND */
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #3a0ca3, #7209b7, #f72585);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* CANVAS FUNDAL */
+#backgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* CONTAINER */
+.container {
+  position: relative; /* deasupra canvas */
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.2);
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+/* HEADER */
+header {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: 2.2em;
+  text-shadow: 0 0 8px #ff79c6, 0 0 16px #9b5de5;
+}
+
+/* SELECT LIMBI */
+header select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  background: rgba(0,0,0,0.6) url('data:image/svg+xml;utf8,<svg fill="white" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  background-size: 16px;
+  color: #fff;
+  font-size: 14px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+  cursor: pointer;
+}
+
+/* GENERATOR SECTIONS */
+.generator {
+  margin-bottom: 35px;
+}
+
+/* TEXTAREAS & INPUTS */
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 12px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+textarea::placeholder, input::placeholder {
+  color: #ddd;
+}
+
+/* BUTOANE */
+button {
+  padding: 12px 25px;
+  background: linear-gradient(90deg,#ff79c6,#9b5de5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255,121,198,0.5);
+}
+
+button:hover {
+  box-shadow: 0 0 20px rgba(255,121,198,0.8);
+  transform: scale(1.05);
+}
+
+/* OUTPUT DIVS */
+#outputContainer div, #nicknameOutputContainer div {
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  word-wrap: break-word;
+  text-shadow: 0 0 4px #ff79c6;
+}
+
+/* TITLURI OUTPUT */
+#outputContainer h2, #nicknameOutputContainer h2 {
+  color: #ff79c6;
+  text-shadow: 0 0 8px #ff79c6, 0 0 12px #9b5de5;
+  margin-bottom: 12px;
+}
+
+/* MEDIA QUERY PENTRU MOBIL */
+@media screen and (max-width: 480px){
+  h1 {
+    font-size: 1.8em;
+  }
+  button, textarea, input[type="text"] {
+    font-size: 14px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
